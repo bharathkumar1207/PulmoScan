@@ -17,6 +17,7 @@ This is a Flask-based web application for detecting lung diseases such as **TB**
 
 ##  Tech Stack
 
+- Google collab (model developing)
 - Python 3
 - Flask
 - TensorFlow / Keras
