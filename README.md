@@ -15,7 +15,7 @@ This is a Flask-based web application for detecting lung diseases such as **TB**
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Python 3
 - Flask
@@ -39,8 +39,8 @@ python app.py
 
 #  Author
 Developed by Bharath Kumar Taddi
-🔗 GitHub - https://github.com/bharathkumar1207 
-🔗 LinkedIn - www.linkedin.com/in/bharath-kumar-81a3632ba
+ GitHub - https://github.com/bharathkumar1207 
+ LinkedIn - www.linkedin.com/in/bharath-kumar-81a3632ba
 
 # License
 This project is for educational purposes only. All rights reserved.
