@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: lung-disease-detector
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PORT
+        value: 10000  # You can omit this; Render sets it automatically
