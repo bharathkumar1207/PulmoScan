@@ -125,4 +125,4 @@ def lung_cancer():
     return render_template("lung_cancer.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
