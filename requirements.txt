@@ -1,4 +1,4 @@
-﻿absl-py==2.2.2
+absl-py==2.2.2
 astunparse==1.6.3
 beautifulsoup4==4.13.4
 blinker==1.9.0
@@ -23,7 +23,6 @@ importlib_metadata==8.6.1
 importlib_resources==6.5.2
 itsdangerous==2.2.0
 Jinja2==3.1.6
-keras==3.9.2
 kiwisolver==1.4.7
 libclang==18.1.1
 Markdown==3.7
