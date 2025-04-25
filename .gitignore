@@ -22,3 +22,8 @@ static/uploads/
 # System files
 .DS_Store
 Thumbs.db
+# Logs
+*.log
+# Environment files
+.env
+
