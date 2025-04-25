@@ -6,7 +6,6 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
 import gdown
-from infected import visualize_infection, display_predicted_mask  # your infection overlay function
 
 app = Flask(__name__)
 
@@ -20,26 +19,31 @@ def download_models():
     os.makedirs(model_dir, exist_ok=True)
 
     models_to_download = {
-        '1a3gOW9J71SW6JpDpIISZrKuu0OfTQRlQ': 'FILE_ID_1',
-        '1DukDCDS99H6c8s4ikbTqu2TnkVBPHmPY': 'FILE_ID_2',
-        '1A7aHqY4_Y_IoXpf8owDmV_mhvHcTqhVq': 'FILE_ID_3'
+        'TBPneumoniaClassificationCNN.h5': '1a3gOW9J71SW6JpDpIISZrKuu0OfTQRlQ',
+        'NoduleDetectionModel.h5': '1DukDCDS99H6c8s4ikbTqu2TnkVBPHmPY',
+        '6LungDiseasedetectionmodel.h5': '1A7aHqY4_Y_IoXpf8owDmV_mhvHcTqhVq'
     }
 
-    for model_name, file_id in models_to_download.items():
-        model_path = os.path.join(model_dir, model_name)
+    for filename, file_id in models_to_download.items():
+        model_path = os.path.join(model_dir, filename)
         if not os.path.exists(model_path):
-            print(f"Downloading {model_name}...")
+            print(f"Downloading {filename}...")
             url = f'https://drive.google.com/uc?id={file_id}'
             gdown.download(url, model_path, quiet=False)
         else:
-            print(f"{model_name} already exists.")
+            print(f"{filename} already exists.")
 
 
 
-# Load models
+
+# Download models first
+download_models()
+
+# Load them from the correct path
 tb_pneumonia_model = load_model('models/TBPneumoniaClassificationCNN.h5')
 lung_cancer_model = load_model('models/NoduleDetectionModel.h5')
 main_model = load_model('models/6LungDiseasedetectionmodel.h5')
+
 
 # Preprocess function
 def preprocess_image(img_path):
