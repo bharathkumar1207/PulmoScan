@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lung Cancer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lung_cancer.css') }}">
+</head>
+<body>
+<nav>
+    <li><a href="/">Home</a></li>
+    <li><a href="/tb_pneumonia">TB / Pneumonia</a></li>
+    <li><a href="/lung_cancer">Lung Cancer</a></li>
+</nav>
+<hr>
+    <h1>Lung Cancer Classification</h1>
+    <form action="/lung_cancer" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required><br><br>
+        <button type="submit">Predict Lung Cancer</button>
+    </form>
+</body>
+</html>

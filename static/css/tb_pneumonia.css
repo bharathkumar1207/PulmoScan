@@ -1,0 +1,71 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Blue Navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3498db; /* blue */
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    background-color: #217dbb;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Form Box */
+form {
+    background-color: white;
+    padding: 30px;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* File input */
+input[type="file"] {
+    margin: 10px 0;
+}
+
+/* Submit Button */
+button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}

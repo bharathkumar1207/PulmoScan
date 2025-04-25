@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lung Disease Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Lung Disease Detection</h1>
+
+    <ul>
+        <li><a href="/tb_pneumonia">TB / Pneumonia</a></li>
+        <li><a href="/lung_cancer">Lung Cancer</a></li>
+    </ul>
+
+    <h2>Upload an X-ray Image</h2>
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+        <input type="file" name="image" required><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

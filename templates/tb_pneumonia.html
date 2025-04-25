@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TB & Pneumonia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tb_pneumonia.css') }}">
+</head>
+<body>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/tb_pneumonia">TB / Pneumonia</a></li>
+    <li><a href="/lung_cancer">Lung Cancer</a></li>
+</ul>
+<hr>
+    <h1>TB, Normal, Pneumonia Classification</h1>
+    <form action="/tb_pneumonia" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required><br><br>
+        <button type="submit">Predict TB/Pneumonia</button>
+    </form>
+</body>
+</html>

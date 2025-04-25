@@ -1,0 +1,82 @@
+/* Reset margins and paddings for consistency */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #3498db;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Centering and styling result content */
+.result-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Prediction image */
+.result-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Buttons and links */
+.btn,
+.model-btn {
+    display: inline-block;
+    margin: 10px 10px 0;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover,
+.model-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Note and final suggestion */
+.note {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
+
+.final-suggestion {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #444;
+}

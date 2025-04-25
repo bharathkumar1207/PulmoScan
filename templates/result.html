@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/tb_pneumonia">TB/Pneumonia Model</a></li>
+        <li><a href="/lung_cancer">Lung Cancer Model</a></li>
+    </ul>
+</nav>
+
+<div class="result-container">
+    <h2>Prediction Result</h2>
+    <p><strong>Predicted Class:</strong> {{ prediction }}</p>
+    <p><strong>Confidence:</strong> {{ confidence }}</p>
+
+    {% if extra_msg %}
+        <p class="note">{{ extra_msg }}</p>
+    {% endif %}
+
+    {% if image_path %}
+        <img src="{{ image_path }}" alt="Uploaded Image">
+    {% else %}
+        <p>No image to display.</p>
+    {% endif %}
+
+    <br>
+    <a href="/" class="btn">Back to Home</a>
+
+    <p class="final-suggestion">
+        For more accurate diagnosis, try individual models below:
+    </p>
+
+    <div class="model-links">
+        <a class="model-btn" href="/tb_pneumonia">TB/Pneumonia</a>
+        <a class="model-btn" href="/lung_cancer">Lung Cancer</a>
+    </div>
+</div>
+
+</body>
+</html>
